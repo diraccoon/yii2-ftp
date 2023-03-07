@@ -545,7 +545,7 @@ class FtpClient implements \Countable
      *
      * @return int
      */
-    public function count($directory = '.', $type = null, $recursive = true, $include_hidden = false)
+    public function count($directory = '.', $type = null, $recursive = true, $include_hidden = false): int
     {
         $items = (($type === null)
             ? $this->nlist($directory, $recursive)
